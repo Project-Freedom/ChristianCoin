@@ -60,7 +60,7 @@ def ch(self, x: int, y: int, z: int):
 def maj(self, x: int, y: int, z: int):
 	return (x & y) ^ (x & z) ^ (y & z)
 
-def __init__(self, message)
+def __init__(self, message):
 	self.buffer = ''
 	self.counter = 0;
 
@@ -69,8 +69,8 @@ def __init__(self, message)
 					raise TypeError	
 	self.update(message)
 
-def update(self, message)
-		if not message
+def update(self, message):
+		if not message:
 				return
 
 		self.buffer += message
@@ -90,7 +90,7 @@ def process(self, block):
 				w[i] = (w[i-16] + sigma0 + w[i-7] + sigma1) & 0xFFFFFFFFFFFFFFFF
 		a,b,c,d,e,f,g,h = self._h
 
-		for i in range(80)
+		for i in range(80):
 				Sigma0 = S0(a)
 				maj0 = maj(a,b,c)
 				temp2 = Sigma0 + maj
