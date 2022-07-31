@@ -114,7 +114,7 @@ def digest(self):
 
 	if i < 112:
 		pad = 111 - i
-	else
+	else:
 		pad = 239 - i
 
 	self2 =  copy.deepcopy(self)
